@@ -1,7 +1,7 @@
 local typedefs = require "kong.db.schema.typedefs"
 
 
-local PLUGIN_NAME = "tbc-consumer-context"
+local PLUGIN_NAME = "consumer-context"
 
 
 local schema = {

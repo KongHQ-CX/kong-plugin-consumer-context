@@ -4,8 +4,8 @@ FROM kong/kong-gateway:latest
 USER root
 
 # Add custom plugin to the image
-COPY kong/plugins/tbc-consumer-context /usr/local/share/lua/5.1/kong/plugins/tbc-consumer-context
-ENV KONG_PLUGINS=bundled,tbc-consumer-context
+COPY kong/plugins/consumer-context /usr/local/share/lua/5.1/kong/plugins/consumer-context
+ENV KONG_PLUGINS=bundled,consumer-context
 
 # Ensure kong user is selected for image execution
 USER kong

@@ -1,4 +1,4 @@
-# TBC Consumer Context Plugin
+# Consumer Context Plugin
 
 This plugin enables the use of consumer level plugins when using Konnect App Auth to authenticate API requests using self service APIKeys. Consumers are hidden when using Konnect App Auth, therefore to allow plugins to be scoped to consumer a new consumer must be created and the context switched to this new consumer based on Application Id.
 
@@ -34,7 +34,7 @@ This plugin enables the use of consumer level plugins when using Konnect App Aut
 | `add_consumer_username_header`                  | boolean | If selected will add request header for x-consumer-username. | `"false"`   |
 | `reject_request_no_matching_consumer`           | boolean | If selected will reject a request where no consumer exists for the applicationId. | `"false"`   |
 
-In order to use the plugin a consumer entity must be manually created with the username set to the value of the Konnect Dev Portal Application's ApplicationId. This can be retrieved in the dev portal when viewing the application by looking at the URI. Example: https://tbcdev.eu.portal.konghq.com/application/57610687-192c-4c37-a8e8-a357ac114af4 - In this case '57610687-192c-4c37-a8e8-a357ac114af4' is the application Id.
+In order to use the plugin a consumer entity must be manually created with the username set to the value of the Konnect Dev Portal Application's ApplicationId. This can be retrieved in the dev portal when viewing the application by looking at the URI. Example: https://devportal.eu.portal.konghq.com/application/57610687-192c-4c37-a8e8-a357ac114af4 - In this case '57610687-192c-4c37-a8e8-a357ac114af4' is the application Id.
 
 ---
 
@@ -54,7 +54,7 @@ Below is a simple Markdown representation of the execution flow:
       │
       ▼
 +-----------------+
-| TBC-Consumer-  |       --> (Consumer Not Found: Allow call but don't map to a consumer)
+| Your-Consumer-  |       --> (Consumer Not Found: Allow call but don't map to a consumer)
 | Context Plugin  |       --> (Valid Consumer)
 +-----------------+
       │
